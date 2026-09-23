@@ -1,59 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Simpus-Mini | Beranda</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        
-        <header>
-            <h1>SIMPUS-Mini</h1>
-            <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="buku/list.html">Daftar Buku</a></li>
-                    <li><a href="buku/tambah.html">Tambah Buku</a></li>
-                    <li><a href="anggota/list.html">Daftar Anggota</a></li>
-                    <li><a href="anggota/list.html">Tambah Anggota</a></li>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rivier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">RIVIER</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" href="#works">Karya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#contact">Hubungi Kami</a></li> -->
                 </ul>
-            </nav>
+            </div>
+        </div>
+    </nav>
 
-            
-        </header>
+    <main>
+        <section class="py-4 py-lg-5">
+            <div class="container">
+                <div class="hero-banner rounded-4 text-white p-4 p-lg-5 d-flex flex-column justify-content-end">
+                    <p class="text-uppercase small text-white mb-2">Creative Digital Studio</p>
+                    <h1 class="hero-title text-white fw-bold mb-0">Wonderful Design for Business</h1>
+                    <p class="hero-lead text-white mt-3 mb-0">Bersama kami, tuangkan kreativitasmu dan ciptakan design impianmu.</p>
+                </div>
+            </div>
+        </section>
 
-        <main>
-            <section>
-                <h2>Selamat datang di Sistem Perpustakaan Mini</h2>
-                <p>Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-            </section>
+        <section class="pb-5" id="works">
+            <div class="container">
+                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-4">
+                    <div>
+                        <p class="text-eyebrow mb-1">Katalog</p>
+                        <h2 class="fw-bold mb-0 text-heading section-title">Karya Unggulan Kami</h2>
+                    </div>
+                    <!-- <div class="btn-group flex-wrap" role="group" aria-label="Filter kategori" id="work-filters">
+                        <button type="button" class="btn btn-primary btn-sm">Semua</button>
+                        <button type="button" class="btn btn-outline-pink btn-sm">Branding</button>
+                        <button type="button" class="btn btn-outline-pink btn-sm">Web</button>
+                        <button type="button" class="btn btn-outline-pink btn-sm">Campaign</button>
+                    </div> -->
+                </div>
 
-            <section>
-                <h2>Ringkasan</h2>
-                <article>
-                    <h3>Total Buku</h3>
-                    <p>12</p>
-                </article>
-                <article>
-                    <h3>Total Anggota</h3>
-                    <p>8</p>
-                </article>
-                <article>
-                    <h3>Sedang Dipinjam</h3>
-                    <p>3</p>
-                </article>
-                <article>
-                    <h3>Buku Terlambat</h3>
-                    <p>5</p>
-                </article>
-            </section>
-        </main>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card-hover card-work h-100">
+                            <div class="work-media">
+                                <img src="assets/images/ai-company.jpg" alt="Nova Labs Identity">
+                                <div class="work-media__overlay">
+                                    <a href="pages/product.html" class="btn btn-primary rounded-3 px-4">Lihat Proyek</a>
+                                </div>
+                            </div>
+                            <div class="card-body mt-3 mb-0">
+                                <div class="tags mb-2">
+                                    <span class="tag">Branding</span>
+                                    <span class="tag tag--muted">2026</span>
+                                </div>
+                                <h3 class="h5 text-heading mb-1">AI Company Profile</h3>
+                                <p class="text-muted mb-0">Sistem visual modular untuk startup AI.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-pink card-hover card-work h-100">
+                            <div class="work-media">
+                                <img src="assets/images/portofolio.jpg" alt="Portofolio">
+                                <div class="work-media__overlay">
+                                    <a href="pages/product.html" class="btn btn-primary rounded-3 px-4">Lihat Proyek</a>
+                                </div>
+                            </div>
+                            <div class="card-body mt-3 mb-0">
+                                <div class="tags mb-2">
+                                    <span class="tag">Web</span>
+                                    <span class="tag tag--muted">2025</span>
+                                </div>
+                                <h3 class="h5 text-heading mb-1">Meridian Portfolio</h3>
+                                <p class="text-muted mb-0">Landing page editorial dengan layout grid luas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-pink card-hover card-work h-100">
+                            <div class="work-media">
+                                <img src="assets/images/lookbook.jpg" alt="Lookbook">
+                                <div class="work-media__overlay">
+                                    <a href="pages/product.html" class="btn btn-primary rounded-3 px-4">Lihat Proyek</a>
+                                </div>
+                            </div>
+                            <div class="card-body mt-3 mb-0">
+                                <div class="tags mb-2">
+                                    <span class="tag">Print</span>
+                                    <span class="tag tag--muted">2025</span>
+                                </div>
+                                <h3 class="h5 text-heading mb-1">Atelier Lookbook</h3>
+                                <p class="text-muted mb-0">Tipografi modern untuk fashion label.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-pink card-hover card-work h-100">
+                            <div class="work-media">
+                                <img src="assets/images/product.jpg" alt="Horizon Launch">
+                                <div class="work-media__overlay">
+                                    <a href="pages/product.html" class="btn btn-primary rounded-3 px-4">Lihat Proyek</a>
+                                </div>
+                            </div>
+                            <div class="card-body mt-3 mb-0">
+                                <div class="tags mb-2">
+                                    <span class="tag">Campaign</span>
+                                    <span class="tag tag--muted">2024</span>
+                                </div>
+                                <h3 class="h5 text-heading mb-1">Brand Soft Launch</h3>
+                                <p class="text-muted mb-0">Key visual untuk product drop.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-pink card-hover card-work h-100">
+                            <div class="work-media">
+                                <img src="assets/images/dashboard.jpg" alt="Dashboard">
+                                <div class="work-media__overlay">
+                                    <a href="pages/product.html" class="btn btn-primary rounded-3 px-4">Lihat Proyek</a>
+                                </div>
+                            </div>
+                            <div class="card-body mt-3 mb-0">
+                                <div class="tags mb-2">
+                                    <span class="tag">UI</span>
+                                    <span class="tag tag--muted">2024</span>
+                                </div>
+                                <h3 class="h5 text-heading mb-1">Dashboard Analytics</h3>
+                                <p class="text-muted mb-0">Interface analytics dengan hierarki jelas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-pink card-hover card-work h-100">
+                            <div class="work-media">
+                                <img src="assets/images/festival.jpg" alt="Festival">
+                                <div class="work-media__overlay">
+                                    <a href="pages/product.html" class="btn btn-primary rounded-3 px-4">Lihat Proyek</a>
+                                </div>
+                            </div>
+                            <div class="card-body mt-3 mb-0">
+                                <div class="tags mb-2">
+                                    <span class="tag">Branding</span>
+                                    <span class="tag tag--muted">2024</span>
+                                </div>
+                                <h3 class="h5 text-heading mb-1">Festival Brand Kit</h3>
+                                <p class="text-muted mb-0">Identitas event musik energi tinggi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 2 </p> 
-        </footer>
-        <script src="assets/js/app.js"></script>
-    </body>
+        <section class="py-4 py-lg-5 border-top" id="services">
+            <div class="container">
+                <div class="row g-4 g-lg-5 align-items-start">
+                    <div class="col-lg-5">
+                        <p class="text-eyebrow">Layanan</p>
+                        <h2 class="fw-bold text-heading mb-3">Layanan Kami</h2>
+                        <p class="text-muted mb-0">
+                            Setiap hasil karya dirancang agar brand terasa konsisten, modern, dan mudah diingat.
+                            Kami memiliki layanan yang sesuai dengan kebutuhan brand kamu.
+                        </p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="accordion accordion-rivier" id="servicesAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#svc1" aria-expanded="true">
+                                        Strategi &amp; Bfrand Kit
+                                    </button>
+                                </h3>
+                                <div id="svc1" class="accordion-collapse collapse show"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Membangun strategi dan identitas visual yang kuat, konsisten, dan mencerminkan karakter brand.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#svc2">
+                                        Desain Web &amp; Produk
+                                    </button>
+                                </h3>
+                                <div id="svc2" class="accordion-collapse collapse"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Website, landing page, dan antarmuka produk yang modern, intuitif, dan berfokus pada pengalaman pengguna.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#svc3">
+                                        Brief Campaign
+                                    </button>
+                                </h3>
+                                <div id="svc3" class="accordion-collapse collapse"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Mengarahkan konsep visual untuk campaign, konten media sosial, hingga peluncuran brand agar tampil lebih konsisten dan berkesan.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" id="about">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <p class="text-eyebrow">Kenapa memilih kami</p>
+                        <h2 class="fw-bold text-heading section-title">Kami membangun brand yang konsisten, modern, dan mudah diingat.</h2>
+                        <ul class="list-unstyled mt-4 text-muted mb-0">
+                            <li class="mb-2">Proses kolaboratif dengan timeline transparan</li>
+                            <li class="mb-2">Tipografi dan spacing konsisten</li>
+                            <li>Deliverable serta siap diimplementasikan</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="card-stat card-hover p-3">
+                                    <div class="card-value display-6 fw-bold mb-1">48+</div>
+                                    <div class="card-title small text-muted mb-0">Proyek selesai</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-stat card-hover p-3">
+                                    <div class="card-value display-6 fw-bold mb-1">14</div>
+                                    <div class="card-title small text-muted mb-0">Tahun pengalaman</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-stat card-hover p-3">
+                                    <div class="card-value display-6 fw-bold mb-1">92%</div>
+                                    <div class="card-title small text-muted mb-0">Klien repeat</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card-stat card-hover p-3">
+                                    <div class="card-value display-6 fw-bold mb-1">6</div>
+                                    <div class="card-title small text-muted mb-0">Penghargaan desain</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-5" id="contact">
+            <div class="container">
+                <div class="card-hover card-pink p-4 p-lg-5 text-center text-md-start">
+                    <blockquote class="blockquote cta-quote mb-3">Siap Membawa Brand Kamu ke Level Berikutnya?</blockquote>
+                    <p class="text-muted mb-0">Wujudkan desain yang lebih premium, modern, dan tetap mencerminkan identitas brand aslinya.</p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mt-4 pt-2">
+                        <a href="#contact" class="btn btn-primary rounded-3 px-4 py-2">Mulai Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="py-5 border-top" id="contact">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <p class="text-eyebrow">Contact</p>
+                        <h2 class="fw-bold text-heading">Initiate a commission.</h2>
+                        <p class="text-muted">Tuangkan ide proyekmu di sini.</p>
+                        <div class="card-hover bg-white text-dark border-0 shadow-sm mt-3">
+                            <div class="card-body mt-3 mb-0">
+                                <p class="text-eyebrow mb-2">Direct line</p>
+                                <p class="text-heading mb-2">hello@rivier.studio</p>
+                                <button type="button" class="btn btn-primary rounded-3 px-4 py-1">Kirim email</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <form action="#" method="get" class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label" for="service">Jenis layanan</label>
+                                <select class="form-select" id="service" name="service">
+                                    <option value="">Pilih layanan</option>
+                                    <option>Brand identity</option>
+                                    <option>Website / UI</option>
+                                    <option>Creative direction</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <span class="form-label d-block">Budget estimasi</span>
+                                <div class="btn-group" role="group">
+                                    <input type="radio" class="btn-check" name="budget" id="b1" value="small">
+                                    <label class="btn btn-outline-secondary btn-sm" for="b1">&lt; 15 jt</label>
+                                    <input type="radio" class="btn-check" name="budget" id="b2" value="mid" checked>
+                                    <label class="btn btn-outline-secondary btn-sm" for="b2">15–40 jt</label>
+                                    <input type="radio" class="btn-check" name="budget" id="b3" value="large">
+                                    <label class="btn btn-outline-secondary btn-sm" for="b3">40 jt+</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="message">Pesan</label>
+                                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary rounded-3 px-4 py-1">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <footer class="border-top py-3">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <div class="d-flex flex-column align-items-md-start align-items-center">
+                    <a class="navbar-brand fw-bold mb-1" href="index.html">RIVIER</a>
+                    <span class="text-muted small">Creative Digital Studio</span>
+                </div>
+                <span class="text-muted small">&copy; 2026 RIVIER</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

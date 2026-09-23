@@ -5,7 +5,7 @@ function initNavToggle() {
     if (!toggleBtn || !nav) return;
 
     toggleBtn.addEventListener("click", function () {
-        nav.classList.toggle("nav-open");
+        nav.classList.toggle("is-open");
     });
 }
 

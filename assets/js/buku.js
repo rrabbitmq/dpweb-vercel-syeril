@@ -23,8 +23,8 @@ async function muatDaftarBuku() {
                 "<td>" + buku.tahun + "</td>" +
                 "<td>" + buku.stok + "</td>" +
                 "<td>" +
-                "<button type=\"button\">Edit</button> " +
-                "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" +
+                "<button type=\"button\" class=\"btn btn-sm btn-warning\">Edit</button> " +
+                "<button type=\"button\" class=\"btn btn-sm btn-danger btn-hapus\">Hapus</button>" +
                 "</td>";
             tbody.appendChild(tr);
         });
