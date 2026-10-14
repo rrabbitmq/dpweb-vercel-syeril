@@ -1,3 +1,4 @@
+// Mengambil & menampilkan Daftar Member secara asinkron dari data/anggota.json
 async function muatDaftarAnggota() {
     const tbody = document.querySelector(".table-responsive table tbody");
     const loading = document.getElementById("loading-indicator");
@@ -23,8 +24,8 @@ async function muatDaftarAnggota() {
                 "<td>" + anggota.alamat + "</td>" +
                 "<td>" + anggota.no_hp + "</td>" +
                 "<td>" +
-                "<button type=\"button\" class=\"btn btn-sm btn-warning\">Edit</button> " +
-                "<button type=\"button\" class=\"btn btn-sm btn-danger btn-hapus\">Hapus</button>" +
+                "<button type=\"button\">Edit</button> " +
+                "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" +
                 "</td>";
             tbody.appendChild(tr);
         });
@@ -35,4 +36,5 @@ async function muatDaftarAnggota() {
         loading.style.display = "none";
     }
 }
+
 document.addEventListener("DOMContentLoaded", muatDaftarAnggota);

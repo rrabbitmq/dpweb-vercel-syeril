@@ -1,38 +1,21 @@
-# Laporan Praktikum Jobsheet 5
+# Cinemax — Jobsheet 6 (Fetch API & JSON)
 
-## Identitas 
+Sistem bioskop mini untuk mengelola data film dan member. Sub-CPMK: Menerapkan komunikasi asinkron (AJAX/fetch, JSON).
 
-| Informasi      | Detail                     |
-| -------------- | -------------------------- |
-| Nama           | Syeril Azalea Rivera       |
-| Kelas          | TI 2F - 28                 |
-| Program Studi  | D-IV - Teknik Informatika  |
-| Mata Kuliah    | Desain dan Pemrograman Web |
+## Perubahan dari Jobsheet 5
+- Tambah `data/buku.json` (10 objek film) dan `data/anggota.json` (4 objek member) sebagai pengganti sementara API sungguhan.
+- `buku/list.html` & `anggota/list.html`: `<tbody>` dikosongkan, baris kini dirender dinamis oleh `assets/js/buku.js` / `assets/js/anggota.js` menggunakan `fetch` + `async/await`.
+- Loading indicator (`#loading-indicator`) tampil selama proses fetch (disimulasikan dengan delay 600ms).
+- Penanganan error (`try/catch`) menampilkan pesan di dalam tabel bila fetch gagal.
+- `app.js`: `initHapusConfirm` diubah ke **event delegation** (`document.addEventListener("click", ...)`) karena tombol Hapus sekarang berada di baris yang dibuat setelah halaman selesai dimuat.
 
-## Struktur Folder
-
-```text
-DPW-2026-Syeril-Azalea-Rivera/
-│
-├── jobsheet-05/
-│   ├── anggota/
-│   │   ├── list.html
-│   │   └── tambah.html
-│   ├── assets/
-│   │   └── css/
-│   │   |    └── style.css
-|   |   └── js/
-│   │       └── app.js
-│   ├── buku/
-│   │   ├── list.html
-│   │   └── tambah.html
-│   ├── dokumentasi/
-│   │   ├── user-flow.md
-│   │   └── wireframe.md
-│   ├── index.html
-│   └── readme.html
-│
-└── README.md
+## Cara menjalankan
+**Penting:** `fetch()` ke file lokal akan diblokir kebijakan CORS jika dibuka langsung dengan `file://`. Jalankan lewat server lokal, misalnya:
+```bash
+php -S localhost:8000
 ```
+lalu buka `http://localhost:8000/index.html`. Bisa juga memakai ekstensi "Live Server" di VSCode.
 
-
+## Catatan
+- Uji error handling dengan mengganti sementara nama file di `fetch(...)` menjadi nama yang salah.
+- Pola `fetch` + `async/await` di sini akan dipakai ulang untuk memanggil endpoint PHP sungguhan mulai Jobsheet 9 (setelah back-end PostgreSQL siap di Jobsheet 8), meskipun mulai Jobsheet 7 rendering utama berpindah ke server-side PHP.

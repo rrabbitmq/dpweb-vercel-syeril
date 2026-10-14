@@ -1,12 +1,12 @@
 [
-    { "judul": "Laskar Pelangi", "pengarang": "Andrea Hirata", "tahun": 2005, "stok": 4 },
-    { "judul": "Bumi Manusia", "pengarang": "Pramoedya Ananta Toer", "tahun": 1980, "stok": 2 },
-    { "judul": "Negeri 5 Menara", "pengarang": "Ahmad Fuadi", "tahun": 2009, "stok": 0 },
-    { "judul": "Filosofi Teras", "pengarang": "Henry Manampiring", "tahun": 2018, "stok": 5 },
-    { "judul": "Ronggeng Dukuh Paruk", "pengarang": "Ahmad Tohari", "tahun": 1982, "stok": 1 },
-    { "judul": "Cantik Itu Luka", "pengarang": "Eka Kurniawan", "tahun": 2002, "stok": 3 },
-    { "judul": "Pulang", "pengarang": "Tere Liye", "tahun": 2015, "stok": 2 },
-    { "judul": "Sang Pemimpi", "pengarang": "Andrea Hirata", "tahun": 2006, "stok": 6 },
-    { "judul": "Perahu Kertas", "pengarang": "Dee Lestari", "tahun": 2009, "stok": 0 },
-    { "judul": "Gadis Kretek", "pengarang": "Ratih Kumala", "tahun": 2012, "stok": 4 }
+    { "judul": "Avatar: The Way of Water", "pengarang": "James Cameron", "tahun": 2022, "stok": 48 },
+    { "judul": "Spider-Man: Across the Spider-Verse", "pengarang": "Joaquim Dos Santos", "tahun": 2023, "stok": 32 },
+    { "judul": "Oppenheimer", "pengarang": "Christopher Nolan", "tahun": 2023, "stok": 0 },
+    { "judul": "Dune: Part Two", "pengarang": "Denis Villeneuve", "tahun": 2024, "stok": 56 },
+    { "judul": "The Batman", "pengarang": "Matt Reeves", "tahun": 2022, "stok": 24 },
+    { "judul": "Everything Everywhere All at Once", "pengarang": "Daniels", "tahun": 2022, "stok": 18 },
+    { "judul": "Top Gun: Maverick", "pengarang": "Joseph Kosinski", "tahun": 2022, "stok": 40 },
+    { "judul": "Joker", "pengarang": "Todd Phillips", "tahun": 2019, "stok": 12 },
+    { "judul": "Parasite", "pengarang": "Bong Joon-ho", "tahun": 2019, "stok": 0 },
+    { "judul": "Interstellar", "pengarang": "Christopher Nolan", "tahun": 2014, "stok": 36 }
 ]

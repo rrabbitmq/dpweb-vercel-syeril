@@ -1,15 +1,18 @@
-// Hamburger Menu
+// ===== Hamburger menu (JS-driven, menggantikan checkbox hack) =====
 function initNavToggle() {
     const toggleBtn = document.getElementById("nav-toggle-btn");
     const nav = document.querySelector("header nav");
     if (!toggleBtn || !nav) return;
 
     toggleBtn.addEventListener("click", function () {
-        nav.classList.toggle("is-open");
+        nav.classList.toggle("nav-open");
     });
 }
 
-// Konfirmasi Hapus
+// ===== Konfirmasi hapus (front-end only, belum ke server) =====
+// Memakai event delegation di document karena baris tabel sekarang
+// dirender dinamis via fetch (lihat buku.js/anggota.js) sehingga
+// tombol .btn-hapus belum tentu ada saat DOMContentLoaded.
 function initHapusConfirm() {
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".btn-hapus");
@@ -24,7 +27,7 @@ function initHapusConfirm() {
     });
 }
 
-// Filter Pencarian Table
+// ===== Filter/pencarian tabel real-time =====
 function initTableFilter() {
     const input = document.getElementById("search-input");
     const table = document.querySelector(".table-responsive table");
@@ -40,7 +43,6 @@ function initTableFilter() {
     });
 }
 
-// Validasi Form
 // ===== Validasi form (client-side) =====
 function tampilkanError(input, pesan) {
     hapusError(input);
@@ -74,7 +76,7 @@ function initValidasiForm() {
 
         const pengarang = form.querySelector("[name='pengarang']");
         if (pengarang && pengarang.value.trim() === "") {
-            tampilkanError(pengarang, "Pengarang wajib diisi.");
+            tampilkanError(pengarang, "Sutradara wajib diisi.");
             valid = false;
         } else if (pengarang) {
             hapusError(pengarang);
@@ -95,7 +97,7 @@ function initValidasiForm() {
         if (stok) {
             const nilai = parseInt(stok.value, 10);
             if (isNaN(nilai) || nilai < 0) {
-                tampilkanError(stok, "Stok tidak boleh negatif.");
+                tampilkanError(stok, "Kursi tersedia tidak boleh negatif.");
                 valid = false;
             } else {
                 hapusError(stok);
