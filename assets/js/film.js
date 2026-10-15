@@ -1,5 +1,5 @@
-// Mengambil & menampilkan Daftar Film secara asinkron dari data/buku.json
-async function muatDaftarBuku() {
+// Mengambil & menampilkan Daftar Film secara asinkron dari data/film.json
+async function muatDaftarFilm() {
     const tbody = document.querySelector(".table-responsive table tbody");
     const loading = document.getElementById("loading-indicator");
     if (!tbody) return;
@@ -11,19 +11,19 @@ async function muatDaftarBuku() {
         // simulasi delay jaringan agar loading indicator terlihat
         await new Promise((resolve) => setTimeout(resolve, 600));
 
-        const res = await fetch("../data/buku.json");
+        const res = await fetch("../data/film.json");
         if (!res.ok) {
             throw new Error("Gagal mengambil data (status " + res.status + ")");
         }
-        const daftarBuku = await res.json();
+        const daftarFilm = await res.json();
 
-        daftarBuku.forEach(function (buku) {
+        daftarFilm.forEach(function (film) {
             const tr = document.createElement("tr");
             tr.innerHTML =
-                "<td>" + buku.judul + "</td>" +
-                "<td>" + buku.pengarang + "</td>" +
-                "<td>" + buku.tahun + "</td>" +
-                "<td>" + buku.stok + "</td>" +
+                "<td>" + film.judul + "</td>" +
+                "<td>" + film.pengarang + "</td>" +
+                "<td>" + film.tahun + "</td>" +
+                "<td>" + film.stok + "</td>" +
                 "<td>" +
                 "<button type=\"button\">Edit</button> " +
                 "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" +
@@ -38,4 +38,4 @@ async function muatDaftarBuku() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", muatDaftarBuku);
+document.addEventListener("DOMContentLoaded", muatDaftarFilm);

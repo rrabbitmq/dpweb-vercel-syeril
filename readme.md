@@ -3,8 +3,8 @@
 Sistem bioskop mini untuk mengelola data film dan member. Sub-CPMK: Menerapkan komunikasi asinkron (AJAX/fetch, JSON).
 
 ## Perubahan dari Jobsheet 5
-- Tambah `data/buku.json` (10 objek film) dan `data/anggota.json` (4 objek member) sebagai pengganti sementara API sungguhan.
-- `buku/list.html` & `anggota/list.html`: `<tbody>` dikosongkan, baris kini dirender dinamis oleh `assets/js/buku.js` / `assets/js/anggota.js` menggunakan `fetch` + `async/await`.
+- Tambah `data/film.json` (10 objek film) dan `data/anggota.json` (4 objek member) sebagai pengganti sementara API sungguhan.
+- `film/list.html` & `anggota/list.html`: `<tbody>` dikosongkan, baris kini dirender dinamis oleh `assets/js/film.js` / `assets/js/anggota.js` menggunakan `fetch` + `async/await`.
 - Loading indicator (`#loading-indicator`) tampil selama proses fetch (disimulasikan dengan delay 600ms).
 - Penanganan error (`try/catch`) menampilkan pesan di dalam tabel bila fetch gagal.
 - `app.js`: `initHapusConfirm` diubah ke **event delegation** (`document.addEventListener("click", ...)`) karena tombol Hapus sekarang berada di baris yang dibuat setelah halaman selesai dimuat.
